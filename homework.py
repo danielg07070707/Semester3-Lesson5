@@ -15,6 +15,7 @@ t.pencolor("green")
 t.fillcolor("green")
 screen.bgcolor("skyblue")
 screen.setup(1000, 500) 
+t.hideturtle()
 #       x (width) is 1000 and y (height) is 500
 #       x: -500 to 500        y: -250 to 250
 
@@ -125,6 +126,13 @@ def draw_window():
         t.forward(50)
         t.left(90)
     t.end_fill()
+    t.forward(20)
+    t.setheading(90)
+    t.forward(50)
+    t.forward(-25)
+    t.right(90)
+    t.forward(20)
+    t.forward(-40)
 
 # roof:
 def draw_roof():
@@ -138,12 +146,48 @@ def draw_roof():
     t.left(160)
     t.end_fill()
 
+#A DoOoOoOoOoOoOoOoOoOoOoOoOoOoOoR 1+1=3
+def draw_door():
+    t.setheading(0)
+    t.forward(57)
+    t.left(90)
+    t.forward(50)
+    for i in range(45):
+        t.forward(2)
+        t.left(4)
+
+    t.forward(52)
+    t.left(90)
+    t.forward(47)
+    t.left(90)
+    t.penup()
+    t.forward(40)
+    t.pendown()
+    t.circle(1)
+
+
 # TODO: edit the coordinates of this part, so that the house is neatly positioned with two windows.
 draw_house()
-teleport(20, 20)
+teleport(110, 50)
 draw_window()
-teleport(120, 20)
+teleport(40, 131)
 draw_roof()
+teleport(10,0)
+draw_door()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
